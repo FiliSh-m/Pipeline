@@ -15,6 +15,9 @@ body {
 	}
 }
 
+a {
+	color: #a5402d;
+}
 
 li {
 	max-width: 800px;
