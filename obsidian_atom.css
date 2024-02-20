@@ -9,7 +9,7 @@ body {
 	margin: auto;
 	font-size: 1.1em;
 	
-	@media screen {
+	@media screen and (orientation: portrait) and (max-width: 1000px){
 		font-size: 2.2em;
 	}
 }
@@ -26,7 +26,7 @@ img {
 	max-width: 800px;
     height: auto; /* Maintain aspect ratio */
 	
-	@media screen {
+	@media screen and (orientation: portrait) and (max-width: 1000px){
 		width: 100%;
 	}
 }
