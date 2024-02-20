@@ -2,7 +2,8 @@ body {
 	font-family: 'Inter', sans-serif;
 	background-color: #272b34;
 	color: #dcddde;
-	margin-left: 20px; /* Adjust margin as needed */
+	padding-left: 20px;
+	padding-right: 20px;
 	line-height: 1.8;
 	max-width: 960px;
 	margin: auto;
