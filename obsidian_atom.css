@@ -1,0 +1,29 @@
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: #272b34;
+	color: #dcddde;
+	margin-left: 20px; /* Adjust margin as needed */
+	line-height: 1.8;
+	max-width: 960px;
+	margin: auto;
+	font-size: 1.1em;
+}
+
+
+li {
+	max-width: 800px;
+    /* float: left; */
+    margin-right: 20px;
+
+img {
+	display: block;
+    margin-bottom: 10px; /* Adjust as needed */
+	max-width: 800px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+code {
+	font-size: 1.1em;
+	color: #88c36d;
+	background-color: #20242b;
+}
