@@ -1,9 +1,9 @@
 # Obrazová pipeline - verze 02.00
 
-[Webová verze](https://filish.eu/)
+[PDF verze ke stažení](https://github.com/FiliSh-m/Pipeline/blob/06cddd8b3224b6ea7f9569927f970051a8e3fde3/Obrazov%C3%A1%20pipeline%20-%20verze%2002.00.pdf)
 
 ## Úvod
-Tento dokument by měl sloužit jako příručka pro kohokoli, kdo řeší problém **color managementu v omezených podmínkách**. Píšu ji z pozice 3D generalisty, který potřebuje získat záběry ze střižny a odevzdat je tak, aby je colorista mohl barvit.
+Tato stránka by měla sloužit jako příručka pro kohokoli, kdo řeší problém **color managementu v omezených podmínkách**. Píšu ji z pozice 3D generalisty, který potřebuje získat záběry ze střižny a odevzdat je tak, aby je colorista mohl barvit.
 
 Vše vychází z mých praktických zkušeností a teoretických znalostí, které se postupně prohlubují. To znamená, že v budoucnu budou další verze, které by měly zohledňovat nové problémy, nebo rozšiřovat využití. Změny napříč verzemi jsou uvedeny v changelogu. V případě potřeby mě kontaktujte na mailu [fili5h@protonmail.com](mailto:fili5h@protonmail.com)
 
