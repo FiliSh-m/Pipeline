@@ -2,5 +2,8 @@
 - obsahuje současnou verzi v pdf, Markdown a webovou stránku
 
 ## Changelog
-- komprese dat pro VFX změněna z DWAB na DWAA
-- colorspace se nyní udává v názvu souboru před číslo framu, ne do suffixu, aby nebyl problém s detekcí sekvence některými programy (DJV) 
+- kompletní přepis
+	- implementace poznatků z bakalářské práce
+	- na přenos dat v EXR se nyní používá **ACEScg RGB half DWAA**
+	- přidány nejzásadnější informace pro color management ve VFX
+- přidány sekce **Důležité poznámky** a **Užitečné programy**
