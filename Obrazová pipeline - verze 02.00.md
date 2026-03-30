@@ -13,6 +13,7 @@ Pipeline má přirozeně své limitace, které jsou uvedeny na konci. Pokud se j
 
 ## Stručný přehled
 ![[images/Color_pipeline_graph_v20.png|800]]
+
 - pipeline je postavená na **ACES 1.3** 
 - po lock cutu kameraman provede pregrade, ve kterém udělá úpravy závislé na **RAW** a případné razantní barevné změny
 - záběry pro VFX se exportují jako **EXR v ACEScg**

@@ -20,13 +20,15 @@
 <p>Hlavním problémem je převod RAW video formátů z profesionálních kamer do formátu použitelnějšího pro VFX postprodukci. Zároveň by mělo být možné zachovat jednotný obraz napříč programy. Pipeline by měla umožňovat zachování maximálního množství obrazových informací po co nejdelší dobu postprodukce při <strong>smysluplných objemech dat</strong>. Pro větší přístupnost ve většině dokumentu není vysvětlováno, proč jsou jednotlivé části pipeline navrženy konkrétním způsobem. Upřesnění, vysvětlení a poznámky jsou pak ve <strong>vlastní sekci</strong> na konci. Jedná se o adaptaci a navázání na mou <a href="http://hdl.handle.net/10563/10039">bakalářskou práci</a>, kde lze najít podrobnější vysvětlení a zdroje.</p>
 <p>Pipeline má přirozeně své limitace, které jsou uvedeny na konci. Pokud se jim někdo chce věnovat, budu rád za sdílení poznatků.</p>
 <h2>Stručný přehled</h2>
-<p><img src="images/Color_pipeline_graph_v20.png" width="800">
-- pipeline je postavená na <strong>ACES 1.3</strong> 
-- po lock cutu kameraman provede pregrade, ve kterém udělá úpravy závislé na <strong>RAW</strong> a případné razantní barevné změny
-- záběry pro VFX se exportují jako <strong>EXR v ACEScg</strong>
-- VFX pracuje v <strong>ACEScg</strong> a data tak také vrací do gradingu
-- grade probíhá v <strong>ACEScc</strong> s Rec.709 / sRGB náhledovou LUTkou
-- zpět do střižny se data vrací v <strong>DNxHR 444 10-bit v Rec.709</strong> anebo jen Resolve projekt</p>
+<p><img src="images/Color_pipeline_graph_v20.png" width="800"></p>
+<ul>
+<li>pipeline je postavená na <strong>ACES 1.3</strong> </li>
+<li>po lock cutu kameraman provede pregrade, ve kterém udělá úpravy závislé na <strong>RAW</strong> a případné razantní barevné změny</li>
+<li>záběry pro VFX se exportují jako <strong>EXR v ACEScg</strong></li>
+<li>VFX pracuje v <strong>ACEScg</strong> a data tak také vrací do gradingu</li>
+<li>grade probíhá v <strong>ACEScc</strong> s Rec.709 / sRGB náhledovou LUTkou</li>
+<li>zpět do střižny se data vrací v <strong>DNxHR 444 10-bit v Rec.709</strong> anebo jen Resolve projekt</li>
+</ul>
 <h2>Důležité poznámky</h2>
 <ul>
 <li>náhledovou LUT nebo output transform je potřeba volit <strong>podle monitoru</strong>, který používáme<ul>
