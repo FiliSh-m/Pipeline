@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrazová pipeline - verze 02.00</title>
+    <link rel="stylesheet" href="obsidian_atom.css">
+</head>
+
+<body>
+    <header class="pipeline-header">
+        <div class="nav-container">
+            <a class="nav-back-link" href="index_cz.html">← Zpět na úvodní stránku</a>
+            <a class="nav-back-link" href="index.html">← Back to Landing Page</a>
+        </div>
+        <h1>Obrazová pipeline - verze 02.00</h1>
+    </header>
+
+    <section>
+        
+<p><a href="https://github.com/FiliSh-m/Pipeline/blob/06cddd8b3224b6ea7f9569927f970051a8e3fde3/Obrazov%C3%A1%20pipeline%20-%20verze%2002.00.pdf">PDF verze ke stažení</a></p>
+<h2>Úvod</h2>
+<p>Tato stránka by měla sloužit jako příručka pro kohokoli, kdo řeší problém <strong>color managementu v omezených podmínkách</strong>. Píšu ji z pozice 3D generalisty, který potřebuje získat záběry ze střižny a odevzdat je tak, aby je colorista mohl barvit.</p>
+<p>Vše vychází z mých praktických zkušeností a teoretických znalostí, které se postupně prohlubují. To znamená, že v budoucnu budou další verze, které by měly zohledňovat nové problémy, nebo rozšiřovat využití. Změny napříč verzemi jsou uvedeny v changelogu. V případě potřeby mě kontaktujte na mailu <a href="mailto:fili5h@protonmail.com">fili5h@protonmail.com</a></p>
+<p>Hlavním problémem je převod RAW video formátů z profesionálních kamer do formátu použitelnějšího pro VFX postprodukci. Zároveň by mělo být možné zachovat jednotný obraz napříč programy. Pipeline by měla umožňovat zachování maximálního množství obrazových informací po co nejdelší dobu postprodukce při <strong>smysluplných objemech dat</strong>. Pro větší přístupnost ve většině dokumentu není vysvětlováno, proč jsou jednotlivé části pipeline navrženy konkrétním způsobem. Upřesnění, vysvětlení a poznámky jsou pak ve <strong>vlastní sekci</strong> na konci. Jedná se o adaptaci a navázání na mou <a href="http://hdl.handle.net/10563/10039">bakalářskou práci</a>, kde lze najít podrobnější vysvětlení a zdroje.</p>
+<p>Pipeline má přirozeně své limitace, které jsou uvedeny na konci. Pokud se jim někdo chce věnovat, budu rád za sdílení poznatků.</p>
+<h2>Stručný přehled</h2>
+<p><img src="images/Color_pipeline_graph_v20.png" width="800"></p>
+<ul>
+<li>pipeline je postavená na <strong>ACES 1.3</strong> </li>
+<li>po lock cutu kameraman provede pregrade, ve kterém udělá úpravy závislé na <strong>RAW</strong> a případné razantní barevné změny</li>
+<li>záběry pro VFX se exportují jako <strong>EXR v ACEScg</strong></li>
+<li>VFX pracuje v <strong>ACEScg</strong> a data tak také vrací do gradingu</li>
+<li>grade probíhá v <strong>ACEScc</strong> s Rec.709 / sRGB náhledovou LUTkou</li>
+<li>zpět do střižny se data vrací v <strong>DNxHR 444 10-bit v Rec.709</strong> anebo jen Resolve projekt</li>
+</ul>
+<h2>Důležité poznámky</h2>
+<ul>
+<li>náhledovou LUT nebo output transform je potřeba volit <strong>podle monitoru</strong>, který používáme<ul>
+<li>pro televize (např. v gradingu) se zpravidla používá <strong>Rec.709</strong></li>
+<li>většina PC monitorů používá <strong>sRGB</strong></li>
+<li>Apple zařízení často používají <strong>P3</strong></li>
+</ul>
+</li>
+<li>v DaVinci Resolve není skutečná náhledová LUT, nastavuje se Output Transform<ul>
+<li>pro náhledové a finální exporty je zásadní přepnout Output Transform na <strong>Rec.709</strong> </li>
+</ul>
+</li>
+</ul>
+<h2>Střih</h2>
+<ul>
+<li>pro offline střih není color management natolik zásadní, je ale vhodné ho v této fázi už nastavit</li>
+<li>ze střižny putují původní video soubory do gradingu na pregrade</li>
+</ul>
+<h3>DaVinci Resolve</h3>
+<ul>
+<li>pro jednoduchou práci doporučuji používat color management celého projektu</li>
+<li>nastavení pro ACES (na PC monitoru) vypadají takto:
+  <img src="images/Project_settings_v20.png" width="800">
+(<em>DaVinci Resolve 20</em>)</li>
+<li>poté se buď klipy automaticky načtou se správným input transform pomocí metadat, nebo je možné color space specifikovat manuálně:
+  <img src="images/Resolve_IDT_log_v20.png" width="800">
+(<em>DaVinci Resolve 20</em>)</li>
+<li>je vhodné pojmenovat klipy záběrů určených pro VFX, usnadňuje to práci s nimi</li>
+<li>takto nastavený projekt pak může být předán na pregrade - projekt je předáván mezi střihem a gradingem, není potřeba exportovat timeline</li>
+</ul>
+<h3>Premiere Pro</h3>
+<ul>
+<li>pro RAW video soubory může být potřeba nainstalovat plugin</li>
+<li>při střihu je vhodné používat náhledovou LUT na převedení z color space kamery do color space monitoru<ul>
+<li>tuto LUT je vhodné zapéct do proxies, než ji na nich potom používat</li>
+</ul>
+</li>
+<li>pro export do gradingu je vhodná XML soupiska společně se zdrojovými soubory z kamery</li>
+</ul>
+<h3>Grafika</h3>
+<ul>
+<li>grafika přichází do střižny v sRGB nebo Rec.709</li>
+<li>pokud je potřeba průhlednost, ProRes a DNxHR jsou vhodnými formáty</li>
+<li>je potřeba dodržet nastavení alphy (straight / premultiplied)</li>
+</ul>
+<h2>Pregrade</h2>
+<ul>
+<li>po lock cutu je potřeba provést barevné úpravy, které využívají funkce RAW videa (ISO, WB, Gamut Compression), protože po tomto kroku už záběry pro VFX nebudou v RAW</li>
+<li>dále pak razantní grade, který by komplikoval práci VFX, by měl být proveden předtím - day for night</li>
+<li>natavení color managementu projektu zůstává stejné maximálně se změní output transform podle používaného monitoru:
+  <img src="images/Project_settings_v20.png" width="800">
+(<em>DaVinci Resolve 20</em>)</li>
+<li>zde není cílem stylizace obrazu, jen barevná korekce, v podstatě vyvolání dat - zbytečný grade by mohl snižovat flexibilitu</li>
+</ul>
+<h3>Export pro VFX</h3>
+<ul>
+<li>data pro VFX jsou v <strong>ACEScg</strong> colorspace, který se musí v Resolvu nastavit (Project settings):
+  <img src="images/Pregrade_export_VFX_v20.png" width="600">
+(<em>DaVinci Resolve 20</em>)</li>
+<li>formát dat pro VFX je <strong>EXR RGB half s DWAA</strong> kompresí (Deliver page):</li>
+<li>vzhledem k tomu, že se jedná o EXR sekvenci, vyplatí se správně nastavit, kam se budou klipy exportovat a jak budou pojmenované
+  <img src="images/Pregrade_export_VFX_deliver_v20.png" width="700">
+(<em>DaVinci Resolve 20</em>)</li>
+</ul>
+<h2>VFX</h2>
+<ul>
+<li>kvůli množství používaných softwarů tato část je o něco více zjednodušená, ale o to více jsou uvedené věci zásadní</li>
+<li>data jsou předávaná v <strong>EXR</strong> sekvencích</li>
+<li>je nutné dodržet color management u svícení a compositingu<ul>
+<li>Nuke i After Effects mají color management pomocí OCIO, takže lze použít ACES 1.3
+<img src="images/Nuke_settings_v20.png" width="400">
+(<em>Nuke 17</em>)
+<img src="images/AE_settings_v20.png" width="600">
+(<em>After Effects 2026</em>)</li>
+<li>Blender od verze 5.0 nativně podporuje renderování a náhled přes ACES
+<img src="images/Blender_50_config_v20.png" width="200">
+(<em>Blender 5.1</em>)</li>
+<li>pro nižší verze Blenderu existuje config <a href="https://github.com/Joegenco/PixelManager">PixelManager</a>, který umožňuje používat ACES společně s AgX, dokonce nastavit working color space na ACEScg</li>
+</ul>
+</li>
+<li>při exportu dat z 3D do compositingu můžeme rozlišovat light data a tech data<ul>
+<li>light data jako beauty pass, light groups, případně všechny light passes je možné ukládat ztrátově do <strong>16-bit DWAA</strong> (RGB half)</li>
+<li>tech data jako Cryptomatte, ZDepth a Position se musí ukládat bezztrátově do <strong>32-bit PIZ</strong> (RGB float)</li>
+<li>jeden render jde tedy pro menší objem dat zapsat do dvou EXR sekvencí a ty pak v compositingu spojit
+<img src="images/Blender_compositing_v20.png" width="800">
+(<em>Blender 5.1</em>)</li>
+</ul>
+</li>
+<li>gradingu putují data z VFX opět jako <strong>RGB half EXR</strong> sekvence s kodekem <strong>DWAA</strong> v <strong>ACEScg</strong></li>
+</ul>
+<h2>Grade</h2>
+<ul>
+<li>Resolve je nastavený stejně jako v pregradu:
+  <img src="images/Project_settings_v20.png" width="800">
+(<em>DaVinci Resolve 20</em>)</li>
+<li>u většiny klipů, co nejsou v RAW, je potřeba specifikovat color space - pro VFX záběry <strong>ACEScg</strong></li>
+<li>klipy s VFX by měly barevně sedět s RAW klipy a je možné mezi nimi kopírovat grade</li>
+<li>pokud probíhá střih v DaVinci Resolve, stačí si opět předat jen projekt</li>
+<li>pro Premiere jsou nabarvené záběry zpět do střižny exportovány společně s XML v <strong>Rec.709</strong> ve formátu <strong>DNxHR 444 10-bit</strong>:
+  <img src="images/Pasted_image_20231025204144.png" width="450">
+(<em>DaVinci Resolve 20</em>)<ul>
+<li>je potřeba si ohlídat handles pro přechody mezi klipy</li>
+</ul>
+</li>
+</ul>
+<h2>Online střih a export</h2>
+<ul>
+<li>ve škole se filmy odevzdávají v <strong>Rec.709</strong><ul>
+<li>v DaVinci Resolve se používá projekt z gradingu, je potřeba nezapomenout přepnout Output Transform z color space monitoru do <strong>Rec.709</strong></li>
+<li>v Premiere neřešíme color management, z gradingu přišly nabarvené klipy v <strong>Rec.709</strong></li>
+</ul>
+</li>
+<li>výrobní kniha v současné chvíli specifikuje dva soubory k odevzdání<ul>
+<li>MP4<ul>
+<li>obraz: H.264, 1080/25p, square pixels, 4:2:0, 8 bit, CBR 32 Mb/s</li>
+<li>zvuk: AAC, stereo 2.0, 48 kHz, 320 kb/s</li>
+</ul>
+</li>
+<li>MXF<ul>
+<li>obraz: DNxHD 185x MXF (184 Mbps), 1080/25p, square pixels, 4:2:2, 10 bit</li>
+<li>zvuk: WAV/PCM, uncompressed 2.0, 24 bit, 48 kHz (EBU R128, programme loudness, level: normalizace: -23 LUFS s tolerancí +- 1.0 LU)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Užitečné programy</h2>
+<ul>
+<li>přehrávání EXR sekvencí - <a href="https://grizzlypeak3d.github.io/DJV/">DJV</a><ul>
+<li>je potřeba stáhnout a nainstalovat <a href="https://github.com/AcademySoftwareFoundation/OpenColorIO-Config-ACES/releases/tag/v1.0.0">ACES 1.3 config</a></li>
+</ul>
+</li>
+<li>čtení metadat - <a href="https://mediaarea.net/en/MediaInfo/Download">MediaInfo</a></li>
+<li>práce se soubory, hromadné přejmenování - <a href="https://www.ghisler.com/download.htm">Total Commander</a></li>
+<li>rychlejší, stabilnější, spolehlivější z hlediska barev videopřehrávač - <a href="https://mpv.io/installation/">MPV</a></li>
+</ul>
+<h2>Upřesnění</h2>
+<ul>
+<li><strong>ACES</strong> obecně je jako <strong>intermediate color space</strong> zvolen díky své univerzálnosti<ul>
+<li>nedává smysl postavit pipeline na žádném color space od Blackmagicu, protože by mohl být problém s převodem dat z jiných kamer a programů, které ho nepodporují</li>
+<li>z tohoto důvodu není pro grade použit DaVinci Wide Gamut Intermediate</li>
+<li>ACES 1.3 je podporovaný napříč používanými programy, v budoucnu bude vhodné přejít na ACES 2.0 - <strong>nejsou kompatibilní</strong></li>
+</ul>
+</li>
+<li>když mluvíme o <strong>Rec.709 / sRGB LUTce</strong>, jde ideálně o <strong>ACES Rec.709 / sRBG ODT</strong> implementované v Resolvu, anebo v jiných programech pomocí <strong>OCIO</strong></li>
+<li>Premiere 2025 přidala color management, ale není vhodný<ul>
+<li>oproti After Effects není jasné, jestli používá OCIO a ACES</li>
+<li>není možné používat ACEScg EXR sekvence</li>
+</ul>
+</li>
+<li><strong>pregrade je nutné zlo</strong>, protože jsou situace, kdy je potřeba využít speciální funkce RAW videa, o které se konverzí pro VFX přijde<ul>
+<li>často nemusí být ani potřeba, zpomaluje předání dat po lock cutu do VFX</li>
+</ul>
+</li>
+<li>konverze z kamerového colorspace do ACEScc s náhledovou LUTkou nám poskytuje <strong>dobrý základ pro grade</strong>, který imituje reálný obraz na place bez ořezu gamutu</li>
+<li><em>Aces Input Transform</em> v nastavení projektu je <strong>výchozí input transform</strong>, který se použije, když Resolve neví, co použít -&gt; dává smysl případně nastavit na <strong>ACEScg</strong> / <strong>Rec.709</strong> podle toho, jaká další data do střižny chodí</li>
+<li><em>Use color space aware grading tools</em> znamená, že pro některé Resolve efekty (klíčování) se <strong>interně převede ACEScc</strong> do koukatelnějšího obrazu a zpět, aby správně fungovaly - nemělo by mít vliv na integritu dat</li>
+<li><strong>PixelManager</strong> umožňuje nastavit working color space do ACEScg<ul>
+<li>je to potřeba změnit v configu</li>
+<li>takto nastavený Blender není kompatibilní s normálním - rendery budou v compositingu vypadat jinak</li>
+</ul>
+</li>
+<li><strong>DWAA je ztrátová komprese pro EXR</strong>, která při výchozím nastavení na level 45 produkuje prakticky identický obraz s přibližně <strong>6x menší velikostí souboru</strong> oproti nejefektivnější bezztrátové kompresi (PIZ)<ul>
+<li>DWAB je varianta stejného algoritmu, která by měla být méně vhodná pro čtení v Nuku - netestováno</li>
+<li>jedná se o <strong>efektivnější kompresi</strong>, než je ve formátu DNxHR, který by jinak mohl být alternativou</li>
+<li>oproti BRAW jde ale o <strong>6x větší datový tok</strong>, nicméně u některých filmů, kde se plýtvalo daty, by mohlo být výhodnější pro předávání dat do gradu celý lockcut vyexportovat jako tyto EXR sekvence</li>
+</ul>
+</li>
+<li><strong>export více EXR sekvencí</strong> je trochu bolestivý kvůli množství vzniklých souborů<ul>
+<li>Resolve nejspíš nepodporuje vlastní číslování klipů při exportu, zde to lze obejít, že se v timeline pojmenují klipy ručně a pak se použije proměnná <code>%Clip Name</code> v názvu souboru</li>
+<li>jinak existují nástroje pro <strong>hromadné přejmenování souborů</strong> (PowerToys, Total Commander)</li>
+</ul>
+</li>
+<li>zpravidla není potřeba psát color space do názvu souboru, až na vyjímky<ul>
+<li>video soubory určené ke sledování by měly být v <strong>Rec.709</strong></li>
+<li>data z kamery často obsahují color space v metadatech, anebo je snadné ho zjistit</li>
+<li>EXR sekvence jsou určené pro <strong>lineární data</strong></li>
+<li>obrázky jsou v <strong>sRGB</strong></li>
+</ul>
+</li>
+<li>většina klipů, co kameraman barví, je <strong>stále RAW</strong>, protože paradoxně jsou relativně malé<ul>
+<li>v EXR jsou <strong>jen věci z VFX</strong></li>
+</ul>
+</li>
+<li><strong>DNxHR 444 10-bit</strong> je mnohem lepší alternativa k <strong>RGB / YUV 422 Uncompressed</strong>, které se také používá pro cestu z Resolvu do Premiere Pro - neztrácí barvy a je menší<ul>
+<li>EXR sekvence by byla ještě menší, ale nejde jí zvolit v Premiere XML presetu v Resolve a s video klipy se lépe pracuje</li>
+</ul>
+</li>
+</ul>
+<h2>Limitace, prostor pro zlepšení</h2>
+<ul>
+<li>v tuto chvíli pracujeme jen s <strong>Blackmagic RAW</strong>, ostatní RAW formáty nejsou otestované, princip zůstává stejný</li>
+<li>bylo by dobré coloristovi umožnit grading v DaVinci Wide Gamut</li>
+<li>v dalších verzích nelze vyloučit možnost generování náhledové LUTky po pregradu, ale pro day for night se asi zapečení gradu nevyhneme</li>
+<li>Resolve dovoluje zapsat do <strong>metadat</strong> údaje o color space, ale u EXR to nefungovalo, respektive Resolve pak nedetekoval správný color space</li>
+<li><strong>DNxHR 444 10-bit</strong> je dost pravděpodobně <strong>zbytečně velký formát</strong> na přenos zpět do střižny vzhledem k technickým podmínkám finálního exportu</li>
+<li>je možné, že ořez do <strong>Rec.709</strong> není vhodný pro případnou konverzi do <strong>DCP</strong>, ale škola očekává na konci <strong>DNxHD s Rec.709 obrazem</strong></li>
+</ul>
+<h2>Changelog</h2>
+<ul>
+<li>kompletní přepis<ul>
+<li>implementace poznatků z bakalářské práce</li>
+<li>na přenos dat v EXR se nyní používá <strong>ACEScg RGB half DWAA</strong></li>
+<li>přidány nejzásadnější informace pro color management ve VFX</li>
+</ul>
+</li>
+<li>přidány sekce <strong>Důležité poznámky</strong> a <strong>Užitečné programy</strong></li>
+</ul>
+    </section>
+</body>
+</html>

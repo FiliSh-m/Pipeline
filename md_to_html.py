@@ -4,7 +4,7 @@ from pathlib import Path
 
 # -------- CONFIG --------
 INPUT_MD = "Obrazová pipeline - verze 02.00.md"
-OUTPUT_HTML = "output.html"
+OUTPUT_HTML = "pipeline.html"
 CSS_FILE = "obsidian_atom.css"
 # -----------------------
 
@@ -62,12 +62,17 @@ def build_html(body_html, title="Document"):
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <link rel="stylesheet" href="{CSS_FILE}">
 </head>
 
 <body>
-    <header>
+    <header class="pipeline-header">
+        <div class="nav-container">
+            <a class="nav-back-link" href="index_cz.html">← Zpět na úvodní stránku</a>
+            <a class="nav-back-link" href="index.html">← Back to Landing Page</a>
+        </div>
         <h1>{title}</h1>
     </header>
 
@@ -103,7 +108,7 @@ def main():
 
     Path(OUTPUT_HTML).write_text(full_html, encoding="utf-8")
 
-    print(f"✅ Done! Output saved to {OUTPUT_HTML}")
+    print(f"Done! Output saved to {OUTPUT_HTML}")
 
 
 if __name__ == "__main__":
