@@ -57,7 +57,7 @@ def convert_internal_links(text):
 def convert_pdf_links(text):
     """
     Rewrites GitHub PDF links to direct download relative links:
-    [PDF verze ke stažení](https://github.com/...) -> <a href="Obrazová pipeline - verze 02.01.pdf" download="Obrazová_pipeline_-_verze_02.01.pdf">PDF verze ke stažení</a>
+    [PDF verze ke stažení](https://github.com/...) -> <a href="Obrazová pipeline - verze 02.01.pdf" download="Obrazová pipeline - verze 02.01.pdf">PDF verze ke stažení</a>
     """
     import urllib.parse
     pattern = r'\[([^\]]+)\]\((https://github\.com/[^)]+\.pdf)\)'
@@ -67,8 +67,7 @@ def convert_pdf_links(text):
         url = match.group(2)
         filename = url.split('/')[-1]
         decoded_filename = urllib.parse.unquote(filename)
-        safe_filename = decoded_filename.replace(' ', '_')
-        return f'<a href="{decoded_filename}" download="{safe_filename}">{label}</a>'
+        return f'<a href="{decoded_filename}" download="{decoded_filename}">{label}</a>'
         
     return re.sub(pattern, repl, text)
 
