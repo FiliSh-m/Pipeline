@@ -92,7 +92,7 @@ def build_html(body_html, title="Document"):
     <header class="pipeline-header">
         <div class="nav-container">
             <a class="nav-back-link" href="index_cz.html">← Zpět na úvodní stránku</a>
-            <a class="nav-back-link" href="index.html">← Back to Landing Page</a>
+            <a class="nav-back-link" href="./">← Back to Landing Page</a>
         </div>
         <h1>{title}</h1>
     </header>
