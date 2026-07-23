@@ -54,6 +54,25 @@ def convert_internal_links(text):
     return re.sub(r'\[\[(.*?)\]\]', r'\1', text)
 
 
+def convert_pdf_links(text):
+    """
+    Rewrites GitHub PDF links to direct download relative links:
+    [PDF verze ke stažení](https://github.com/...) -> <a href="Obrazová pipeline - verze 02.01.pdf" download="Obrazová_pipeline_-_verze_02.01.pdf">PDF verze ke stažení</a>
+    """
+    import urllib.parse
+    pattern = r'\[([^\]]+)\]\((https://github\.com/[^)]+\.pdf)\)'
+    
+    def repl(match):
+        label = match.group(1)
+        url = match.group(2)
+        filename = url.split('/')[-1]
+        decoded_filename = urllib.parse.unquote(filename)
+        safe_filename = decoded_filename.replace(' ', '_')
+        return f'<a href="{decoded_filename}" download="{safe_filename}">{label}</a>'
+        
+    return re.sub(pattern, repl, text)
+
+
 def load_markdown(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
         return f.read()
@@ -106,6 +125,7 @@ def main():
     # Obsidian-specific fixes
     md_text = convert_obsidian_images(md_text)
     md_text = convert_internal_links(md_text)
+    md_text = convert_pdf_links(md_text)
 
     # Convert Markdown → HTML
     html_body = markdown.markdown(
