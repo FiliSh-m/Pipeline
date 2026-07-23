@@ -3,4 +3,4 @@
 
 ## Changelog
 - změny vyplývající z úpravy struktury stránek
-- 
+- přidány upřesnění úprav do budoucna
