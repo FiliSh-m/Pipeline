@@ -1,6 +1,6 @@
-# Obrazová pipeline - verze 02.00
+# Obrazová pipeline - verze 02.01
 
-[PDF verze ke stažení](https://github.com/FiliSh-m/Pipeline/blob/06cddd8b3224b6ea7f9569927f970051a8e3fde3/Obrazov%C3%A1%20pipeline%20-%20verze%2002.00.pdf)
+[PDF verze ke stažení](https://github.com/FiliSh-m/Pipeline/blob/main/Obrazov%C3%A1%20pipeline%20-%20verze%2002.01.pdf)
 
 ## Úvod
 Tato stránka by měla sloužit jako příručka pro kohokoli, kdo řeší problém **color managementu v omezených podmínkách**. Píšu ji z pozice 3D generalisty, který potřebuje získat záběry ze střižny a odevzdat je tak, aby je colorista mohl barvit.
@@ -12,7 +12,7 @@ Hlavním problémem je převod RAW video formátů z profesionálních kamer do 
 Pipeline má přirozeně své limitace, které jsou uvedeny na konci. Pokud se jim někdo chce věnovat, budu rád za sdílení poznatků.
 
 ## Stručný přehled
-![[images/Color_pipeline_graph_v20.png|800]]
+![[Color_pipeline_graph_v201.png]]
 
 - pipeline je postavená na **ACES 1.3** 
 - po lock cutu kameraman provede pregrade, ve kterém udělá úpravy závislé na **RAW** a případné razantní barevné změny
@@ -159,6 +159,10 @@ Pipeline má přirozeně své limitace, které jsou uvedeny na konci. Pokud se j
 	- EXR sekvence by byla ještě menší, ale nejde jí zvolit v Premiere XML presetu v Resolve a s video klipy se lépe pracuje
 
 ## Limitace, prostor pro zlepšení
+- tato verze je funkční, ale krátce po vydání došlo k několika změnám, kvůli kterým bude potřeba po otestování pipeline aktualizovat - nyní na to nemám čas
+	- ACES 2.0 je podporovaný napříč více programy
+	- DaVinci Resolve 21 přidalo možnost zvolit output transform na exportu, tím pádem prakticky podporuje náhledové ODT
+	- Nuke 17 color management s ACES 2.0 má jinak pojmenované color spaces
 - v tuto chvíli pracujeme jen s **Blackmagic RAW**, ostatní RAW formáty nejsou otestované, princip zůstává stejný
 - bylo by dobré coloristovi umožnit grading v DaVinci Wide Gamut
 - v dalších verzích nelze vyloučit možnost generování náhledové LUTky po pregradu, ale pro day for night se asi zapečení gradu nevyhneme
@@ -167,8 +171,4 @@ Pipeline má přirozeně své limitace, které jsou uvedeny na konci. Pokud se j
 - je možné, že ořez do **Rec.709** není vhodný pro případnou konverzi do **DCP**, ale škola očekává na konci **DNxHD s Rec.709 obrazem**
 
 ## Changelog
-- kompletní přepis
-	- implementace poznatků z bakalářské práce
-	- na přenos dat v EXR se nyní používá **ACEScg RGB half DWAA**
-	- přidány nejzásadnější informace pro color management ve VFX
-- přidány sekce **Důležité poznámky** a **Užitečné programy**
+- upřesnění prostoru ke zlepšení na základě skutečností, které vznikly po vydání verze 02.00

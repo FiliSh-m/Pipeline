@@ -9,7 +9,7 @@
    id="svg1"
    sodipodi:docname="Color_pipeline_graph.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
-   inkscape:export-filename="export\Color_pipeline_graph_v20.png"
+   inkscape:export-filename="Color_pipeline_graph_v201.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,14 +27,14 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.65702005"
-     inkscape:cx="963.44092"
-     inkscape:cy="617.18056"
+     inkscape:cx="839.396"
+     inkscape:cy="726.76625"
      inkscape:window-width="1920"
-     inkscape:window-height="1051"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-height="1057"
+     inkscape:window-x="1042"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g11" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs1">
     <marker
@@ -217,21 +217,22 @@
     <text
        xml:space="preserve"
        id="text4-8"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect4-0);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect4-0);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.27316123,-0.37559654,0.37559654,0.27316123,16.519284,412.37836)"><tspan
-         x="443.57585"
-         y="588.92879"
-         id="tspan3"><tspan
+         x="439.47425"
+         y="589.03354"
+         id="tspan58"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan2">RAW</tspan></tspan></text>
+           id="tspan1">RAW</tspan></tspan></text>
     <g
        id="g4"
        inkscape:label="Střih"
-       transform="matrix(0.66233891,0,0,0.66233891,187.08185,152.427)">
+       transform="matrix(0.66233891,0,0,0.66233891,187.08185,152.427)"
+       style="fill:#d16d45;fill-opacity:1">
       <rect
-         style="fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          id="rect2"
          width="290.03946"
          height="104.41417"
@@ -240,40 +241,41 @@
       <text
          xml:space="preserve"
          id="text2"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#272b34;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(1.058326,0,0,1.058326,-312.11799,-34.673037)"><tspan
            x="285.55042"
            y="589.60167"
-           id="tspan5"><tspan
-             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;fill:#272b34"
-             id="tspan4">Střih</tspan></tspan></text>
+           id="tspan60"><tspan
+             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
+             id="tspan59">Střih</tspan></tspan></text>
       <text
          xml:space="preserve"
          id="text4"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect4);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect4);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(0.70118814,0,0,0.70118814,-308.01906,252.44356)"><tspan
            x="304.0054"
            y="589.60167"
-           id="tspan7"><tspan
+           id="tspan62"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan6">Adobe Premiere Pro
+             id="tspan61">Adobe Premiere Pro
 </tspan></tspan><tspan
            x="341.13042"
-           y="643.60789"
-           id="tspan9"><tspan
+           y="643.50316"
+           id="tspan64"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan8">DaVinci Resolve</tspan></tspan></text>
+             id="tspan63">DaVinci Resolve</tspan></tspan></text>
     </g>
     <g
        id="g8"
        inkscape:label="Střih 2"
-       transform="matrix(0.66233891,0,0,0.66233891,1335.5795,152.427)">
+       transform="matrix(0.66233891,0,0,0.66233891,1335.5795,152.427)"
+       style="fill:#d16d45;fill-opacity:1">
       <rect
-         style="fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          id="rect7"
          width="290.03946"
          height="104.41417"
@@ -282,40 +284,41 @@
       <text
          xml:space="preserve"
          id="text7"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect8);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect8);display:inline;fill:#272b34;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(1.058326,0,0,1.058326,-312.11799,-34.673037)"><tspan
            x="285.55042"
            y="589.60167"
-           id="tspan11"><tspan
-             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;fill:#272b34"
-             id="tspan10">Střih</tspan></tspan></text>
+           id="tspan66"><tspan
+             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
+             id="tspan65">Střih</tspan></tspan></text>
       <text
          xml:space="preserve"
          id="text8"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect9);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect9);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(0.70118814,0,0,0.70118814,-308.01906,252.44356)"><tspan
            x="304.0054"
            y="589.60167"
-           id="tspan13"><tspan
+           id="tspan68"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan12">Adobe Premiere Pro
+             id="tspan67">Adobe Premiere Pro
 </tspan></tspan><tspan
            x="341.13042"
-           y="643.60789"
-           id="tspan15"><tspan
+           y="643.50316"
+           id="tspan70"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan14">DaVinci Resolve</tspan></tspan></text>
+             id="tspan69">DaVinci Resolve</tspan></tspan></text>
     </g>
     <g
        id="g11"
        inkscape:label="VFX"
-       transform="matrix(0.66233891,0,0,0.66233891,739.45455,420.40977)">
+       transform="matrix(0.66233891,0,0,0.66233891,739.45455,420.40977)"
+       style="fill:#d16d45;fill-opacity:1">
       <rect
-         style="fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          id="rect10"
          width="290.03946"
          height="104.41417"
@@ -324,47 +327,48 @@
       <text
          xml:space="preserve"
          id="text10"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect11);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect11);display:inline;fill:#272b34;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(1.058326,0,0,1.058326,-312.11799,-34.673037)"><tspan
            x="288.69626"
            y="589.60167"
-           id="tspan17"><tspan
-             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;fill:#272b34"
-             id="tspan16">VFX</tspan></tspan></text>
+           id="tspan72"><tspan
+             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
+             id="tspan71">VFX</tspan></tspan></text>
       <text
          xml:space="preserve"
          id="text11"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect12);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect12);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(0.70118814,0,0,0.70118814,-308.01906,252.44356)"><tspan
            x="415.65685"
            y="589.60167"
-           id="tspan19"><tspan
+           id="tspan74"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan18">Blender
+             id="tspan73">Blender
 </tspan></tspan><tspan
            x="438.5527"
-           y="643.60789"
-           id="tspan21"><tspan
+           y="643.50316"
+           id="tspan76"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan20">Nuke
+             id="tspan75">Nuke
 </tspan></tspan><tspan
            x="307.46927"
-           y="697.61412"
-           id="tspan23"><tspan
+           y="697.40465"
+           id="tspan78"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan22">Adobe After Effects
+             id="tspan77">Adobe After Effects
 </tspan></tspan></text>
     </g>
     <g
        id="g14"
        inkscape:label="Pregrade"
-       transform="matrix(0.66233891,0,0,0.66233891,528.89666,-126.49385)">
+       transform="matrix(0.66233891,0,0,0.66233891,528.89666,-126.49385)"
+       style="fill:#d16d45;fill-opacity:1">
       <rect
-         style="fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          id="rect13"
          width="290.03946"
          height="104.41417"
@@ -373,34 +377,35 @@
       <text
          xml:space="preserve"
          id="text13"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect14);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect14);display:inline;fill:#272b34;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(1.058326,0,0,1.058326,-312.11799,-34.673037)"><tspan
            x="244.13373"
            y="589.60167"
-           id="tspan25"><tspan
-             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;fill:#272b34"
-             id="tspan24">Pregrade</tspan></tspan></text>
+           id="tspan80"><tspan
+             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
+             id="tspan79">Pregrade</tspan></tspan></text>
       <text
          xml:space="preserve"
          id="text14"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect15);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect15);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(0.70118814,0,0,0.70118814,-308.01906,252.44356)"><tspan
            x="341.13042"
            y="589.60167"
-           id="tspan27"><tspan
+           id="tspan82"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan26">DaVinci Resolve</tspan></tspan></text>
+             id="tspan81">DaVinci Resolve</tspan></tspan></text>
     </g>
     <g
        id="g17"
        inkscape:label="Grade"
-       transform="matrix(0.66233891,0,0,0.66233891,991.03022,-126.49385)">
+       transform="matrix(0.66233891,0,0,0.66233891,991.03022,-126.49385)"
+       style="fill:#d16d45;fill-opacity:1">
       <rect
-         style="fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          id="rect16"
          width="290.03946"
          height="104.41417"
@@ -409,36 +414,36 @@
       <text
          xml:space="preserve"
          id="text16"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect17);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect17);display:inline;fill:#272b34;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(1.058326,0,0,1.058326,-312.11799,-34.673037)"><tspan
            x="271.56083"
            y="589.60167"
-           id="tspan29"><tspan
-             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;fill:#272b34"
-             id="tspan28">Grade</tspan></tspan></text>
+           id="tspan84"><tspan
+             style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
+             id="tspan83">Grade</tspan></tspan></text>
       <text
          xml:space="preserve"
          id="text17"
-         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect18);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+         style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect18);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
          x="44.121258"
          y="0"
          transform="matrix(0.70118814,0,0,0.70118814,-308.01906,252.44356)"><tspan
            x="341.13042"
            y="589.60167"
-           id="tspan31"><tspan
+           id="tspan86"><tspan
              style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle"
-             id="tspan30">DaVinci Resolve</tspan></tspan></text>
+             id="tspan85">DaVinci Resolve</tspan></tspan></text>
     </g>
     <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
+       style="display:inline;fill:#d16d45;fill-opacity:1;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
        d="M 314.46958,488.11148 444.35919,304.89877"
        id="path18"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
+       style="display:inline;fill:#d16d45;fill-opacity:1;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
        d="M 798.47929,750.62522 981.692,343.18202"
        id="path19"
        inkscape:connector-type="polyline"
@@ -446,29 +451,29 @@
     <text
        xml:space="preserve"
        id="text19"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect19);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect19);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.19484118,-0.42157648,0.42157648,0.19484118,537.04656,623.3646)"><tspan
-         x="415.84252"
-         y="588.92879"
-         id="tspan33"><tspan
+         x="407.50547"
+         y="589.03354"
+         id="tspan88"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan32">ACEScg</tspan></tspan></text>
+           id="tspan87">ACEScg</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text20"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect20);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect20);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.19484118,-0.42157648,0.42157648,0.19484118,576.68528,635.93298)"><tspan
-         x="292.91973"
-         y="588.92879"
-         id="tspan35"><tspan
+         x="272.39079"
+         y="589.03354"
+         id="tspan90"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan34">EXR RGB half DWAA</tspan></tspan></text>
+           id="tspan89">EXR RGB half DWAA</tspan></tspan></text>
     <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
+       style="display:inline;fill:#d16d45;fill-opacity:1;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
        d="m 572.34451,329.67817 161.45529,416.69"
        id="path20"
        inkscape:connector-type="polyline"
@@ -476,47 +481,47 @@
     <text
        xml:space="preserve"
        id="text21"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect22);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect22);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.1816508,0.42742579,-0.42742579,0.1816508,824.98692,200.80642)"><tspan
-         x="415.84252"
-         y="588.92879"
-         id="tspan37"><tspan
+         x="407.50547"
+         y="589.03354"
+         id="tspan92"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan36">ACEScg</tspan></tspan></text>
+           id="tspan91">ACEScg</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text22"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect23);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect23);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.16959369,0.43235148,-0.43235148,0.16959369,796.73351,225.13145)"><tspan
-         x="292.91973"
-         y="588.92879"
-         id="tspan39"><tspan
+         x="272.39079"
+         y="589.03354"
+         id="tspan94"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan38">EXR RGB half DWAA</tspan></tspan></text>
+           id="tspan93">EXR RGB half DWAA</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text23"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect24);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect24);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.46441622,0.00271939,-0.00271939,0.46441622,553.95076,-36.520963)"><tspan
-         x="443.57585"
-         y="588.92879"
-         id="tspan41"><tspan
+         x="439.47425"
+         y="589.03354"
+         id="tspan96"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan40">RAW</tspan></tspan></text>
+           id="tspan95">RAW</tspan></tspan></text>
     <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
+       style="display:inline;fill:#d16d45;fill-opacity:1;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
        d="m 666.27493,249.64886 224.58016,-1.39917"
        id="path23"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
+       style="display:inline;fill:#d16d45;fill-opacity:1;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
        d="m 1052.8432,331.61177 183.6916,177.89086"
        id="path26"
        inkscape:connector-type="polyline"
@@ -524,29 +529,29 @@
     <text
        xml:space="preserve"
        id="text26"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect27);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect27);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.32815022,0.32864456,-0.32864456,0.32815022,1185.7631,56.398538)"><tspan
-         x="346.67978"
-         y="588.92879"
-         id="tspan43"><tspan
+         x="328.20333"
+         y="589.03354"
+         id="tspan98"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan42">RAW / Rec.709</tspan></tspan></text>
+           id="tspan97">RAW / Rec.709</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text27"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect28);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect28);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.32815022,0.32864456,-0.32864456,0.32815022,1160.2588,89.242442)"><tspan
-         x="247.09569"
-         y="588.92879"
-         id="tspan45"><tspan
+         x="218.84908"
+         y="589.03354"
+         id="tspan100"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan44">RAW / DNxHR 444 10-bit</tspan></tspan></text>
+           id="tspan99">RAW / DNxHR 444 10-bit</tspan></tspan></text>
     <rect
-       style="fill:#a5402d;fill-opacity:1;stroke-width:0.412986;stroke-dasharray:none"
+       style="fill:#d16d45;fill-opacity:1;stroke-width:0.412986;stroke-dasharray:none"
        id="rect29"
        width="119.59454"
        height="43.05402"
@@ -561,11 +566,11 @@
        transform="matrix(0.43638892,0,0,0.43638892,1609.7892,39.059617)"><tspan
          x="283.70667"
          y="589.60167"
-         id="tspan47"><tspan
+         id="tspan102"><tspan
            style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;fill:#272b34"
-           id="tspan46">MP4</tspan></tspan></text>
+           id="tspan101">MP4</tspan></tspan></text>
     <rect
-       style="fill:#a5402d;fill-opacity:1;stroke-width:0.412986;stroke-dasharray:none"
+       style="fill:#d16d45;fill-opacity:1;stroke-width:0.412986;stroke-dasharray:none"
        id="rect31"
        width="119.59454"
        height="43.05402"
@@ -574,17 +579,17 @@
     <text
        xml:space="preserve"
        id="text31"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect32);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect32);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00467;stroke-dasharray:none"
        x="44.121258"
        y="0"
        transform="matrix(0.43638892,0,0,0.43638892,1609.7892,533.09347)"><tspan
          x="284.34209"
          y="589.60167"
-         id="tspan49"><tspan
+         id="tspan104"><tspan
            style="font-family:Inter;-inkscape-font-specification:Inter;text-align:center;text-anchor:middle;fill:#272b34"
-           id="tspan48">MXF</tspan></tspan></text>
+           id="tspan103">MXF</tspan></tspan></text>
     <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
+       style="display:inline;fill:#d16d45;fill-opacity:1;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
        d="M 1474.8134,484.64378 1674.0843,324.39761"
        id="path32"
        inkscape:connector-type="polyline"
@@ -592,29 +597,29 @@
     <text
        xml:space="preserve"
        id="text32"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect33);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect33);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.36675483,-0.28492228,0.28492228,0.36675483,1218.1806,318.66287)"><tspan
-         x="411.59715"
-         y="588.92879"
-         id="tspan51"><tspan
+         x="402.88047"
+         y="589.03354"
+         id="tspan106"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan50">Rec.709</tspan></tspan></text>
+           id="tspan105">Rec.709</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text33"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect34);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect34);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.36675483,-0.28492228,0.28492228,0.36675483,1247.613,348.03844)"><tspan
-         x="326.79704"
-         y="588.92879"
-         id="tspan53"><tspan
+         x="299.11998"
+         y="589.03354"
+         id="tspan108"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan52">H.264 4:2:0 8-bit</tspan></tspan></text>
+           id="tspan107">H.264 4:2:0 8-bit</tspan></tspan></text>
     <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
+       style="display:inline;fill:#d16d45;fill-opacity:1;fill-rule:evenodd;stroke:#a5402d;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:8.67402, 2.89134;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Triangle)"
        d="m 1471.8516,580.76427 196.0521,164.16844"
        id="path34"
        inkscape:connector-type="polyline"
@@ -622,26 +627,26 @@
     <text
        xml:space="preserve"
        id="text34"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect35);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect35);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.35101504,0.30410238,-0.30410238,0.35101504,1584.5606,296.67498)"><tspan
-         x="411.59715"
-         y="588.92879"
-         id="tspan55"><tspan
+         x="402.88047"
+         y="589.03354"
+         id="tspan110"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan54">Rec.709</tspan></tspan></text>
+           id="tspan109">Rec.709</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text35"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect36);display:inline;fill:#a5402d;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
+       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect36);display:inline;fill:#d16d45;fill-opacity:1;stroke-width:1.00157;stroke-dasharray:none"
        x="91.069206"
        y="0"
        transform="matrix(0.35101504,0.30410238,-0.30410238,0.35101504,1561.4935,331.27403)"><tspan
-         x="298.27439"
-         y="588.92879"
-         id="tspan57"><tspan
+         x="272.54704"
+         y="589.03354"
+         id="tspan112"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan56">DNxHD 4:2:2 10-bit</tspan></tspan></text>
+           id="tspan111">DNxHD 4:2:2 10-bit</tspan></tspan></text>
   </g>
 </svg>

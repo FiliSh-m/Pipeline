@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obrazová pipeline - verze 02.00</title>
+    <title>Obrazová pipeline - verze 02.01</title>
     <link rel="stylesheet" href="obsidian_atom.css?v=2">
 </head>
 
@@ -13,19 +13,19 @@
             <a class="nav-back-link" href="index_cz.html">← Zpět na úvodní stránku</a>
             <a class="nav-back-link" href="index.html">← Back to Landing Page</a>
         </div>
-        <h1>Obrazová pipeline - verze 02.00</h1>
+        <h1>Obrazová pipeline - verze 02.01</h1>
     </header>
 
     <section>
         
-<p><a href="https://github.com/FiliSh-m/Pipeline/blob/06cddd8b3224b6ea7f9569927f970051a8e3fde3/Obrazov%C3%A1%20pipeline%20-%20verze%2002.00.pdf">PDF verze ke stažení</a></p>
+<p><a href="https://github.com/FiliSh-m/Pipeline/blob/main/Obrazov%C3%A1%20pipeline%20-%20verze%2002.01.pdf">PDF verze ke stažení</a></p>
 <h2>Úvod</h2>
 <p>Tato stránka by měla sloužit jako příručka pro kohokoli, kdo řeší problém <strong>color managementu v omezených podmínkách</strong>. Píšu ji z pozice 3D generalisty, který potřebuje získat záběry ze střižny a odevzdat je tak, aby je colorista mohl barvit.</p>
 <p>Vše vychází z mých praktických zkušeností a teoretických znalostí, které se postupně prohlubují. To znamená, že v budoucnu budou další verze, které by měly zohledňovat nové problémy, nebo rozšiřovat využití. Změny napříč verzemi jsou uvedeny v changelogu. V případě potřeby mě kontaktujte na mailu <a href="mailto:fili5h@protonmail.com">fili5h@protonmail.com</a></p>
 <p>Hlavním problémem je převod RAW video formátů z profesionálních kamer do formátu použitelnějšího pro VFX postprodukci. Zároveň by mělo být možné zachovat jednotný obraz napříč programy. Pipeline by měla umožňovat zachování maximálního množství obrazových informací po co nejdelší dobu postprodukce při <strong>smysluplných objemech dat</strong>. Pro větší přístupnost ve většině dokumentu není vysvětlováno, proč jsou jednotlivé části pipeline navrženy konkrétním způsobem. Upřesnění, vysvětlení a poznámky jsou pak ve <strong>vlastní sekci</strong> na konci. Jedná se o adaptaci a navázání na mou <a href="http://hdl.handle.net/10563/10039">bakalářskou práci</a>, kde lze najít podrobnější vysvětlení a zdroje.</p>
 <p>Pipeline má přirozeně své limitace, které jsou uvedeny na konci. Pokud se jim někdo chce věnovat, budu rád za sdílení poznatků.</p>
 <h2>Stručný přehled</h2>
-<p><img src="images/Color_pipeline_graph_v20.png" width="800"></p>
+<p><img src="images/Color_pipeline_graph_v201.png"></p>
 <ul>
 <li>pipeline je postavená na <strong>ACES 1.3</strong> </li>
 <li>po lock cutu kameraman provede pregrade, ve kterém udělá úpravy závislé na <strong>RAW</strong> a případné razantní barevné změny</li>
@@ -225,6 +225,12 @@
 </ul>
 <h2>Limitace, prostor pro zlepšení</h2>
 <ul>
+<li>tato verze je funkční, ale krátce po vydání došlo k několika změnám, kvůli kterým bude potřeba po otestování pipeline aktualizovat - nyní na to nemám čas<ul>
+<li>ACES 2.0 je podporovaný napříč více programy</li>
+<li>DaVinci Resolve 21 přidalo možnost zvolit output transform na exportu, tím pádem prakticky podporuje náhledové ODT</li>
+<li>Nuke 17 color management s ACES 2.0 má jinak pojmenované color spaces</li>
+</ul>
+</li>
 <li>v tuto chvíli pracujeme jen s <strong>Blackmagic RAW</strong>, ostatní RAW formáty nejsou otestované, princip zůstává stejný</li>
 <li>bylo by dobré coloristovi umožnit grading v DaVinci Wide Gamut</li>
 <li>v dalších verzích nelze vyloučit možnost generování náhledové LUTky po pregradu, ale pro day for night se asi zapečení gradu nevyhneme</li>
@@ -234,13 +240,7 @@
 </ul>
 <h2>Changelog</h2>
 <ul>
-<li>kompletní přepis<ul>
-<li>implementace poznatků z bakalářské práce</li>
-<li>na přenos dat v EXR se nyní používá <strong>ACEScg RGB half DWAA</strong></li>
-<li>přidány nejzásadnější informace pro color management ve VFX</li>
-</ul>
-</li>
-<li>přidány sekce <strong>Důležité poznámky</strong> a <strong>Užitečné programy</strong></li>
+<li>upřesnění prostoru ke zlepšení na základě skutečností, které vznikly po vydání verze 02.00</li>
 </ul>
     </section>
 </body>
