@@ -276,6 +276,21 @@ section {
     margin-bottom: 40px;
 }
 
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
 .about-content {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -314,7 +329,7 @@ section {
     margin-bottom: 12px;
     color: var(--text-normal);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
 }
 
@@ -519,6 +534,17 @@ section {
     
     .about-section {
         padding: 30px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 180px;
+        height: 180px;
     }
     
     .callout-card {
