@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+import sys
 import re
 import markdown
 from pathlib import Path
@@ -85,7 +87,21 @@ def build_html(body_html, title="Document"):
 
 
 def main():
-    md_text = load_markdown(INPUT_MD)
+    # Read the markdown input path from command line arguments if specified
+    if len(sys.argv) > 1:
+        input_md_path = Path(sys.argv[1])
+    else:
+        # Fallback: dynamically look for any markdown file matching pattern
+        md_files = list(Path(".").glob("Obrazov*.md"))
+        if not md_files:
+            raise FileNotFoundError("No markdown file specified and could not find any Obrazov*.md file.")
+        input_md_path = md_files[0]
+
+    if not input_md_path.exists():
+        raise FileNotFoundError(f"Markdown file not found: {input_md_path}")
+
+    print(f"Compiling: {input_md_path}")
+    md_text = load_markdown(input_md_path)
 
     # Obsidian-specific fixes
     md_text = convert_obsidian_images(md_text)
